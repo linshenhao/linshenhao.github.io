@@ -884,6 +884,13 @@ const projectPreviews = {
     alt: 'Pairs trading cover: S&P 500 and STOXX 600 markets, cointegration and mean reversion.',
     description: 'Tests whether trading pairs of related stocks can generate returns in US and European markets. After transaction costs, returns were modest and varied by market, despite low market exposure and drawdowns. The goal: assess whether the strategy holds up under realistic trading conditions.',
     url: 'https://github.com/linshenhao/pairs-trading-sp500-stoxx'
+  },
+  literacy: {
+    title: 'Financial Literacy in Italy',
+    cover: 'assets/financial-literacy-cover.png',
+    alt: 'Financial Literacy in Italy: survey analysis, regional comparisons and financial education insights.',
+    description: 'Analyzes Italy’s 2023 survey to compare traditional and digital financial skills. Over a quarter of internet users meet the target in only one area, showing why one overall score can hide important gaps. The goal: help financial education focus on the skills people actually need.',
+    url: 'https://github.com/linshenhao/financial-literacy-italy'
   }
 };
 document.querySelectorAll('[data-project-preview]').forEach(link => {
