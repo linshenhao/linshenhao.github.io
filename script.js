@@ -684,6 +684,7 @@ function updateCvStory() {
   if (progress > .02 && educationIntroPlaying) stopEducationIntro();
   previousStoryTop = rect.top;
   const blend = smoothstep(0, 1, bridge);
+  avatarScene.classList.toggle('is-home', bridge < .1);
   const workBlend = smoothstep(0, 1, clamp01(1 - folderRect.top / (window.innerHeight * .55)));
   avatarScene.style.setProperty('--home-opacity', (1 - blend).toFixed(3));
   avatarScene.style.setProperty('--story-opacity', (workBlend > 0 ? 0 : blend).toFixed(3));

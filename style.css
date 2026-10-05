@@ -648,5 +648,33 @@ body:has(.contact-dialog[open]) { overflow: hidden; }
   -webkit-backdrop-filter: blur(12px) saturate(180%) brightness(112%);
   backdrop-filter: blur(12px) saturate(180%) brightness(112%);
 }
+
+/* Keep the phone menu outside the nav pill and the project rows above the folder face. */
+@media (max-width: 760px) {
+  .nav-links { position: absolute; top: calc(100% + 10px); left: 0; right: 0; z-index: 4; }
+  .nav.menu-open { border-radius: 32px; }
+  .nav-links a { min-height: 44px; display: flex; align-items: center; }
+  .menu-toggle { flex: none; }
+  .nav-cta { white-space: nowrap; }
+  .hero-visual.is-home { transform: translateY(70px); }
+  .work-folder-interactive.is-open { transform: translateY(-70px); }
+  .work-folder-interactive:not(.is-open):hover .work-folder-trigger { transform: rotate(-6deg); }
+  .work-folder-interactive:not(.is-open):hover .work-folder-files { visibility: hidden; opacity: 0; transform: translateY(35px); }
+  .work-folder-interactive:not(.is-open):hover .work-folder-front { transform: none; }
+  .work-folder-interactive:not(.is-open):hover .work-folder-paper-one { transform: rotate(-4deg); }
+  .work-folder-interactive:not(.is-open):hover .work-folder-paper-two { transform: rotate(5deg); }
+  .work-folder-interactive.is-open .work-folder-trigger { transform: rotate(-2deg) translateY(150px) scale(1.025); }
+  .work-folder-interactive.is-open .work-folder-files { top: 30px; }
+  .work-folder-files a { min-height: 48px; height: auto; line-height: 1.35; }
+}
+@media (max-width: 440px) {
+  .nav { padding-left: 14px; }
+  .nav-logo { font-size: .95rem; }
+  .nav-cta { font-size: .7rem; padding: 8px 9px; }
+  .hero { padding-top: 112px; }
+}
+@media (max-width: 360px) {
+  .work-folder-interactive.is-open { transform: translateY(-120px); }
+}
 .contact-dialog.glass:hover { transform: none; }
 .contact-dialog { border-radius: 26px; }
